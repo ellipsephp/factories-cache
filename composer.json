@@ -1,0 +1,19 @@
+{
+    "name": "pmall/cache",
+    "description": "the cache component of the pmall framework",
+    "type": "library",
+    "authors": [
+        {
+            "name": "pmall",
+            "email": "pierre.mallinjoud@gmail.com"
+        }
+    ],
+    "require": {
+        "psr/cache": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pmall\\Cache\\": "src"
+        }
+    }
+}
