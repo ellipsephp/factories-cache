@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "psr/cache": "^1.0"
+        "psr/cache": "^1.0",
+        "cache/predis-adapter": "^0.4.2"
     },
     "autoload": {
         "psr-4": {
