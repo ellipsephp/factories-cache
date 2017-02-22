@@ -10,9 +10,9 @@
     ],
     "require": {
         "psr/cache": "^1.0",
-        "cache/taggable-cache": "^0.4.3",
-        "cache/predis-adapter": "^0.4.2",
-        "cache/filesystem-adapter": "^0.3.3",
+        "cache/taggable-cache": "^0.5-dev",
+        "cache/predis-adapter": "^0.5-dev",
+        "cache/filesystem-adapter": "^0.4-dev",
         "cache/encryption-cache": "^0.2-dev"
     },
     "autoload": {
