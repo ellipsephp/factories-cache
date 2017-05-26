@@ -1,7 +1,7 @@
 {
     "name": "ellipse/cache",
     "type": "library",
-    "description": "the cache component of the ellipse framework",
+    "description": "The cache component of the ellipse framework",
     "keywords": [
         "psr-6",
         "cache",
