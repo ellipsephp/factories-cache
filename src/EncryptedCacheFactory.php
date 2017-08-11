@@ -1,13 +1,13 @@
 <?php
 
-namespace Ellipse\Cache\Factories;
+namespace Ellipse\Cache;
 
 use Psr\Cache\CacheItemPoolInterface;
 
-use Defuse\Crypto\Key;
-
-use Cache\Encryption\EncryptedCachePool;
 use Cache\Taggable\TaggablePSR6PoolAdapter;
+use Cache\Encryption\EncryptedCachePool;
+
+use Defuse\Crypto\Key;
 
 class EncryptedCacheFactory
 {
@@ -16,14 +16,14 @@ class EncryptedCacheFactory
      * key.
      *
      * @param Psr\Cache\CacheItemPoolInterface  $cache
-     * @param string                            $key_str
+     * @param string                            $str
      * @return Psr\Cache\CacheItemPoolInterface
      */
-    public function __invoke(CacheItemPoolInterface $cache, string $key_str): CacheItemPoolInterface
+    public function __invoke(CacheItemPoolInterface $cache, string $str): CacheItemPoolInterface
     {
         $taggable = TaggablePSR6PoolAdapter::makeTaggable($cache);
 
-        $key = Key::loadFromAsciiSafeString($key_str);
+        $key = Key::loadFromAsciiSafeString($str);
 
         return new EncryptedCachePool($taggable, $key);
     }

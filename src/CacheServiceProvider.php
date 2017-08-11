@@ -4,28 +4,28 @@ namespace Ellipse\Cache;
 
 use Interop\Container\ServiceProvider;
 
-use Ellipse\Cache\Factories\FilesCacheFactory;
-use Ellipse\Cache\Factories\RedisCacheFactory;
-use Ellipse\Cache\Factories\EncryptedCacheFactory;
+use Ellipse\Cache\FilesystemCacheFactory;
+use Ellipse\Cache\PredisCacheFactory;
+use Ellipse\Cache\EncryptedCacheFactory;
 
 class CacheServiceProvider implements ServiceProvider
 {
     public function getServices()
     {
         return [
-            FilesCacheFactory::class => function ($container) {
+            FilesystemCacheFactory::class => function () {
 
-                return new FilesCacheFactory;
-
-            },
-
-            RedisCacheFactory::class => function ($container) {
-
-                return new RedisCacheFactory;
+                return new FilesystemCacheFactory;
 
             },
 
-            EncryptedCacheFactory::class => function ($container) {
+            PredisCacheFactory::class => function () {
+
+                return new PredisCacheFactory;
+
+            },
+
+            EncryptedCacheFactory::class => function () {
 
                 return new EncryptedCacheFactory;
 
