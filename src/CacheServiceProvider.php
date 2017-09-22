@@ -2,15 +2,15 @@
 
 namespace Ellipse\Cache;
 
-use Interop\Container\ServiceProvider;
+use Interop\Container\ServiceProviderInterface;
 
 use Ellipse\Cache\FilesystemCacheFactory;
 use Ellipse\Cache\PredisCacheFactory;
 use Ellipse\Cache\EncryptedCacheFactory;
 
-class CacheServiceProvider implements ServiceProvider
+class CacheServiceProvider implements ServiceProviderInterface
 {
-    public function getServices()
+    public function getFactories()
     {
         return [
             FilesystemCacheFactory::class => function () {
@@ -31,5 +31,10 @@ class CacheServiceProvider implements ServiceProvider
 
             },
         ];
+    }
+
+    public function getExtensions()
+    {
+        //
     }
 }

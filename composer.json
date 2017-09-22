@@ -28,7 +28,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1",
-        "container-interop/service-provider": "^0.3.0",
+        "container-interop/service-provider": "^0.4.0",
         "psr/cache": "^1.0",
         "ellipse/binder": "^1.0",
         "cache/filesystem-adapter": "^1.0",
