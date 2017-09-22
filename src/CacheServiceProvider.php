@@ -35,6 +35,6 @@ class CacheServiceProvider implements ServiceProviderInterface
 
     public function getExtensions()
     {
-        //
+        return [];
     }
 }
