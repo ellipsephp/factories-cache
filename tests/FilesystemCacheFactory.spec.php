@@ -4,7 +4,7 @@ use Cache\Adapter\Filesystem\FilesystemCachePool;
 
 use League\Flysystem\Filesystem;
 
-use Ellipse\Cache\FilesystemCacheFactory;
+use Ellipse\Factories\FilesystemCacheFactory;
 
 describe('FilesystemCacheFactory', function () {
 

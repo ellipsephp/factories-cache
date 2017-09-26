@@ -6,7 +6,7 @@ use Cache\Encryption\EncryptedCachePool;
 
 use Defuse\Crypto\Key;
 
-use Ellipse\Cache\EncryptedCacheFactory;
+use Ellipse\Factories\EncryptedCacheFactory;
 
 describe('EncryptedCacheFactory', function () {
 

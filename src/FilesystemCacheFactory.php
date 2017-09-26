@@ -1,6 +1,6 @@
 <?php
 
-namespace Ellipse\Cache;
+namespace Ellipse\Factories;
 
 use Psr\Cache\CacheItemPoolInterface;
 

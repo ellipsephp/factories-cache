@@ -4,7 +4,7 @@ use Cache\Adapter\Predis\PredisCachePool;
 
 use Predis\Client;
 
-use Ellipse\Cache\PredisCacheFactory;
+use Ellipse\Factories\PredisCacheFactory;
 
 describe('PredisCacheFactory', function () {
 

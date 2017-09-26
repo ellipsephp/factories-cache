@@ -1,10 +1,11 @@
 {
-    "name": "ellipse/cache",
+    "name": "ellipse/factories-cache",
     "type": "library",
-    "description": "The cache component of the ellipse framework",
+    "description": "Collection of Psr-6 cache factories based on php-cache",
     "keywords": [
         "psr-6",
         "cache",
+        "factory",
         "factories",
         "filesystem",
         "flysystem",
@@ -13,10 +14,10 @@
         "encryption"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/ellipsephp/cache",
+    "homepage": "https://github.com/ellipsephp/factories-cache",
     "support": {
-        "issues": "https://github.com/ellipsephp/cache/issues",
-        "source": "https://github.com/ellipsephp/cache"
+        "issues": "https://github.com/ellipsephp/factories-cache/issues",
+        "source": "https://github.com/ellipsephp/factories-cache"
     },
     "authors": [
         {
@@ -44,7 +45,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ellipse\\Cache\\": "src"
+            "Ellipse\\Factories\\": "src"
         }
     },
     "extra": {
