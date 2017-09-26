@@ -28,20 +28,19 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1",
-        "container-interop/service-provider": "^0.4.0",
         "psr/cache": "^1.0",
         "cache/filesystem-adapter": "^1.0",
         "cache/predis-adapter": "^1.0",
         "cache/taggable-cache": "^1.0",
-        "cache/encryption-cache": "^1.0"
+        "cache/encryption-cache": "^1.0",
+        "league/flysystem": "^1.0",
+        "predis/predis": "^1.1",
+        "defuse/php-encryption": "^2.1"
     },
     "require-dev": {
         "peridot-php/peridot": "^1.19",
         "peridot-php/leo": "^1.6",
-        "mockery/mockery": "^1.0@alpha",
-        "league/flysystem": "^1.0",
-        "predis/predis": "^1.1",
-        "defuse/php-encryption": "^2.1"
+        "mockery/mockery": "^1.0@alpha"
     },
     "autoload": {
         "psr-4": {
@@ -51,13 +50,6 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
-        },
-        "bindings": {
-            "classes": {
-                "service-providers": [
-                    "Ellipse\\Cache\\CacheServiceProvider"
-                ]
-            }
         }
     }
 }

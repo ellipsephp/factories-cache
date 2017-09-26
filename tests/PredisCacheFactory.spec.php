@@ -14,6 +14,20 @@ describe('PredisCacheFactory', function () {
 
     });
 
+    describe('::create()', function () {
+
+        it('should proxy the ->__invoke() method', function () {
+
+            $client = Mockery::mock(Client::class);
+
+            $test = (new PredisCacheFactory)($client);
+
+            expect($test)->to->be->an->instanceof(PredisCachePool::class);
+
+        });
+
+    });
+
     describe('->__invoke()', function () {
 
         it('should return a new PredisCachePool using the given predis client', function () {

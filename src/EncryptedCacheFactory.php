@@ -12,6 +12,18 @@ use Defuse\Crypto\Key;
 class EncryptedCacheFactory
 {
     /**
+     * Allow to use the factory statically.
+     *
+     * @param Psr\Cache\CacheItemPoolInterface  $cache
+     * @param string                            $str
+     * @return Psr\Cache\CacheItemPoolInterface
+     */
+    public static function create(CacheItemPoolInterface $cache, string $str): CacheItemPoolInterface
+    {
+        return (new EncryptedCacheFactory)($cache, $str);
+    }
+
+    /**
      * Make a new encrypted cache using the given cache and the given encryption
      * key.
      *

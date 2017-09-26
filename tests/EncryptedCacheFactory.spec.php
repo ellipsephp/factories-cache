@@ -16,6 +16,21 @@ describe('EncryptedCacheFactory', function () {
 
     });
 
+    describe('::create()', function () {
+
+        it('should proxy the ->__invoke() method', function () {
+
+            $cache = Mockery::mock(CacheItemPoolInterface::class);
+            $str = Key::createNewRandomKey()->saveToAsciiSafeString();
+
+            $test = (new EncryptedCacheFactory)($cache, $str);
+
+            expect($test)->to->be->an->instanceof(EncryptedCachePool::class);
+
+        });
+
+    });
+
     describe('->__invoke()', function () {
 
         it('should return a new EncryptedCachePool using the given instance of CacheItemPoolInterface and encryption key', function () {
