@@ -16,7 +16,7 @@ class PredisCacheFactory
      * @param \Predis\Client $client
      * @return \Psr\Cache\CacheItemPoolInterface
      */
-    public function create(Client $client): CacheItemPoolInterface
+    public static function create(Client $client): CacheItemPoolInterface
     {
         return new PredisCachePool($client);
     }

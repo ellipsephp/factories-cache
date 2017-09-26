@@ -17,7 +17,7 @@ class FilesystemCacheFactory
      * @param string                        $folder
      * @return \Psr\Cache\CacheItemPoolInterface
      */
-    public function create(Filesystem $filesystem, string $folder = '.'): CacheItemPoolInterface
+    public static function create(Filesystem $filesystem, string $folder = '.'): CacheItemPoolInterface
     {
         return (new FilesystemCacheFactory)($filesystem, $folder);
     }
